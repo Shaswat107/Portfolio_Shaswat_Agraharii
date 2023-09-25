@@ -2,6 +2,19 @@ const body = document.body
 
 const btnTheme = document.querySelector('.fa-moon')
 const btnHamburger = document.querySelector('.fa-bars')
+var flag = 0
+const email = document.querySelector("#email");
+email.addEventListener("click",()=>{
+	
+	if(flag == 0){
+		email.innerHTML = "shaswatagrahari0@gmail.com";
+		flag = 1;
+	}else{
+		email.innerHTML = "Email me";
+		console.log("again pressed");
+		flag = 0;
+	}})
+
 
 const addThemeClass = (bodyClass, btnClass) => {
   body.classList.add(bodyClass)
